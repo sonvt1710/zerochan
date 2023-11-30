@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from enum import IntEnum, Enum
-from typing import List
+from typing import List, Optional
 
 
 @dataclass
@@ -18,6 +18,7 @@ class ZeroChanImage:
     height: int  # in px
     width: int  # in px
     kbsize: int  # in KB
+    multi: Optional[bool] = False
 
     @property
     def size(self):
